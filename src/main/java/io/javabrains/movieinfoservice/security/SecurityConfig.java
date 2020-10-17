@@ -70,14 +70,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/api/**").hasRole("USER")
                 .anyRequest().authenticated()
                 .and()
-                /*.formLogin()
+                .formLogin()
                 .loginPage("/login")
                 .failureUrl("/login/error")
                 .defaultSuccessUrl("/")
                 .and()
                 .logout()
                 .logoutSuccessUrl("/")
-                .and()*/
+                .and()
                 .httpBasic();
     }
 
