@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Main Page</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link rel="icon" th:href="@{/images/favicon.png}">
+</head>
+<body class="text-center">
+<div class="row">
+    <div class="offset-3 col-md-6">
+        <form th:action="@{/logout}" method="post" sec:authorize="isAuthenticated()">
+            <button type="submit" class="btn btn-primary float-right">Logout</button>
+        </form>
+        <h1>Welcome</h1>
+    </div>
+</div>
+</body>
+</html>
